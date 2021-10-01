@@ -1,0 +1,50 @@
+using System;
+
+public class Program
+{
+public static void Main()
+{
+//compare to
+Console.WriteLine("1 это бумага");
+int bumaga = 1;
+Console.WriteLine("2 это ножницы");
+int nojnitsy = 2;
+Console.WriteLine("3 это камень");
+int kameni = 3;
+Console.WriteLine("ваш ход:");
+int number1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("ход второго игрока:");
+Random rnd = new Random();
+int number2 = rnd.Next(1, 4); //1,2,3, mejdu 1 i 4
+Console.WriteLine(number2);
+if (number1 == number2)
+{
+Console.WriteLine("ничья");
+}
+
+if (bumaga == 1 && number2 == 3)
+{
+Console.WriteLine("Вы выиграли");
+}
+
+if (kameni == 3 && number2 == 1)
+{
+Console.WriteLine("Вы проиграли");
+}
+
+if (number1 == nojnitsy && number2 == 3)
+{
+Console.WriteLine("Вы выиграли");
+}
+
+if (nojnitsy == number1 && number2 == 1)
+{
+Console.WriteLine("Вы проиграли");
+}
+
+if (number1 == nojnitsy && number2 == 3)
+{
+Console.WriteLine("Вы выиграли");
+}
+}
+}
